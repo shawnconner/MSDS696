@@ -29,6 +29,8 @@ Most of the cleansing and preperation was done before running the models in the 
  
 ## GraphX
 
+To create graphs I used GraphX in Spark.  I used Scala as the programming language for all my Spark jobs.  The firest input into GraphX was a file that contained all the ids assigned to individuals.  This file was used to create the Vertexes.  The second input was the output of my Random Forest model. This file had pairs of ids that were identified as the same person.  This file was used as the edges.  The output of the file was a csv which had the minimim id for each cluster and then a pipe delimited list of all the ids in the cluster.  The mimiumum id is what I will use to identify clusters.  
+
 ## Future work
 
 The following items are things I would like to do in the future
