@@ -3,7 +3,7 @@
 ## Project Description
 During my last Data Science Data Science Practicum I created models to try to identify individuals that are the same person. I created two models to compare 2 inviduals to deteremine if they are the same person.  The first model was a random forest and the second model was a Logistic Regression.  The output of these models was the id of the two individuals compared and a flag indicating whether the model identified them as the same person.  
 
-For this project I'm going to take the output of the models and create graphs of the individuals.  The goal is to create clusters or indiviudals that are the same person.  The reason for using a graph is that all the individuals may not have been linked together.  Somd individuals in the cluster might have been liked using another link in the graph.
+For this project I'm going to take the output of the models and create graphs of the individuals.  The goal is to create clusters or indiviudals that are the same person.  The reason for using a graph is that all the individuals may not have been linked together.  Some individuals in the cluster might have been linked using another link in the graph.
 
 
 ## Data ##
@@ -16,11 +16,25 @@ For this project I'm going to take the output of the models and create graphs of
  
  * I wanted to get a sense of if there were any ids that mapped to a high number of other individuals.  To look at this I did a group by on the first individual id and got a count of the number of individuals each cluster had.  I then created a bar graph in Tableau show the distribution.
  
- * I also wanted to get a sense of the max number of clusters to expect.  Based on the graph I expected there to be around X clusters.  
+ * I also wanted to get a sense of the max number of clusters to expect. To get this estimate I looked at the number of distinct individuals in the first position of model output.  I expected the number of unique individuals in my graph to be X based on that.
+ 
+  * The last thing I did was check to see how many of the individuals in the first column appeard in the second column.  This gave me a sense of how many clusters would expand out beyond the initial grouping.
 
 ## Data Cleansing and Preperation
 
+Most of the cleansing and preperation was done before running the models in the previous project.  For the project I wanted to remove individuls that linked to more then X other ids.  I picked this number based on a few reasons
+ * On average I expected there to be around 8 to 10 indiviudals linked to a together.  These clusters are well above that number.
+ * When I looked at these groups they didn't like the same person.
+ * I wanted to be very conserative in my groupings.
+ 
 ## GraphX
+
+## Future work
+
+The following items are things I would like to do in the future
+ * For this analysis I only used the output of one of my models. I would like to try to combine the output of multiple models to come up with a confidence score for each link.  
+ * For the models I only created clusters based on name and address.  I would like to also try clusters based on email address/phone and first name and last name.  
+ * I would like to add a confidence value to each edge to allow me to pull out links at a certain confidence level.
 
 ## Resources
  * US Census Data - Population by State - https://www.census.gov/data/tables/2017/demo/popest/state-total.html#par_textimage_1574439295
