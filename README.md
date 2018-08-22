@@ -22,7 +22,7 @@ For this project I'm going to take the output of the models and create graphs of
 
 ## Data Cleansing and Preperation
 
-Most of the cleansing and preperation was done before running the models in the previous project.  For the project I wanted to remove individuls that linked to more then X other ids.  I picked this number based on a few reasons
+Most of the cleansing and preperation was done before running the models in the previous project.  For the project I wanted to remove individuls that linked to more then 10 other ids.  I picked this number based on a few reasons
  * On average I expected there to be around 8 to 10 indiviudals linked to a together.  These clusters are well above that number.
  * When I looked at these groups they didn't like the same person.
  * I wanted to be very conserative in my groupings.
