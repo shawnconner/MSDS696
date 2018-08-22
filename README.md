@@ -16,7 +16,7 @@ For this project I'm going to take the output of the models and create graphs of
  
  * I wanted to get a sense of if there were any ids that mapped to a high number of other individuals.  To look at this I did a group by on the first individual id and got a count of the number of individuals each cluster had.  I then created a bar graph in Tableau show the distribution.
  
- * I also wanted to get a sense of the max number of clusters to expect. To get this estimate I looked at the number of distinct individuals in the first position of model output.  I expected the number of unique individuals in my graph to be X based on that.
+ * I also wanted to get a sense of the max number of clusters to expect. To get this estimate I looked at the number of distinct individuals in the first position of model output.  I expected the number of unique individuals in my graph to be 1,186,419,757 based on that.
  
   * The last thing I did was check to see how many of the individuals in the first column appeard in the second column.  This gave me a sense of how many clusters would expand out beyond the initial grouping.
 
